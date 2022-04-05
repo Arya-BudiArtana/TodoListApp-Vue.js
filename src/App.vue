@@ -67,14 +67,8 @@ mounted() {
     done(todoIndex) {
       this.todos = this.todos.filter((item, index) => {
         if (index == todoIndex) {
-          item.isDone = false;
+          item.isDone = !item.isDone;
         }
-
-        if (index == todoIndex) {
-          item.isDone = true;
-        }
-
-
         return item;
       });
 
